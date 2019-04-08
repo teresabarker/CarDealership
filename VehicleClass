@@ -1,0 +1,25 @@
+package com.company;
+
+public class Vehicle {
+
+    // Variables
+    private String VehicleBrand, VehicleModel, VehicleMake;
+    private int VehicleYear, NumVehicles;
+
+    //Setters and Getters
+    public String getVehicleBrand() { return VehicleBrand; }
+    public void setVehicleBrand(String _VehicleBrand) {this.VehicleBrand = _VehicleBrand;}
+
+    public String getVehicleModel() { return VehicleModel; }
+    public void setVehicleModel(String _VehicleModel) {this.VehicleModel = _VehicleModel;}
+
+    public String getVehicleMake() { return VehicleMake; }
+    public void setVehicleMake(String _VehicleMake) {this.VehicleMake = _VehicleMake;}
+
+    public int getVehicleYear() { return VehicleYear; }
+    public void setVehicleYear(int _VehicleYear) {this.VehicleYear = _VehicleYear;}
+
+    public int getNumVehicles() { return NumVehicles; }
+    public void setNumVehicles(int _NumVehicles) {this.NumVehicles = _NumVehicles;}
+
+}
