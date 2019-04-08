@@ -1,0 +1,30 @@
+package com.company;
+
+import java.util.ArrayList;
+
+public class Inventory {
+
+    private ArrayList vehicleList;
+    private ArrayList partsList;
+
+    public Inventory() {
+        vehicleList = new ArrayList<Vehicle>();
+        partsList = new ArrayList<Parts>();
+    }
+
+    public Vehicle getVehicle(int _vehicle) {
+        return (Vehicle) vehicleList.get(_vehicle);
+    }
+
+    public void setVehicle(Vehicle _vehicle) {
+        vehicleList.add(_vehicle);
+    }
+
+    public Parts getParts(int _parts) {
+        return (Parts) partsList.get(_parts);
+    }
+
+    public void setParts(Parts _parts) {
+        parts.List.add(_parts);
+    }
+}
