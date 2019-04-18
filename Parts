@@ -1,0 +1,33 @@
+package com.company;
+
+enum PartCategory{suspension, gear, carBreak, vehicleFrame, engine, tire, wheel, }
+enum PartID{name}
+
+public class Parts {
+
+    private PartID partID;
+    private String  name;
+    private PartCategory partCategory;
+    public Parts(PartID _partID, PartCategory _partCategory, String _name){
+        super();
+        this.name = _name;
+        this.partCategory = _partCategory;
+        this.partID = _partID;
+    }
+
+
+
+    public PartID getPartID(){
+        return partID;
+    }
+    public void setPartID(PartID randomID){this.partID = randomID;}
+
+    public String getName(){return name;}
+
+    public void setName(String partName){this.name = partName;}
+
+    public PartCategory getPartCategory() {
+        return partCategory;
+    }
+    public void setPartCategory(PartCategory _partCategory){this.partCategory = _partCategory;}
+}
