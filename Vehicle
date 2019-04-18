@@ -1,10 +1,17 @@
 package com.company;
-
+enum VehicleMake{sedan, truck, SUV, van, sportsCar}
 public class Vehicle {
-
     // Variables
-    private String VehicleBrand, VehicleModel, VehicleMake;
+    private VehicleMake VehicleMake;
+    private String VehicleBrand, VehicleModel;
     private int VehicleYear, NumVehicles;
+
+    public Vehicle(String _vehicleBrand, String _vehicleModel, VehicleMake _vehicleMake, int _VehicleYear){
+        this.VehicleBrand = _vehicleBrand;
+        this.VehicleMake = _vehicleMake;
+        this.VehicleModel = _vehicleModel;
+        this.VehicleYear = _VehicleYear;
+    }
 
     //Setters and Getters
     public String getVehicleBrand() { return VehicleBrand; }
@@ -13,13 +20,14 @@ public class Vehicle {
     public String getVehicleModel() { return VehicleModel; }
     public void setVehicleModel(String _VehicleModel) {this.VehicleModel = _VehicleModel;}
 
-    public String getVehicleMake() { return VehicleMake; }
-    public void setVehicleMake(String _VehicleMake) {this.VehicleMake = _VehicleMake;}
+    public VehicleMake getVehicleMake() { return VehicleMake; }
+    public void setVehicleMake(VehicleMake _VehicleMake) {this.VehicleMake = _VehicleMake;}
 
     public int getVehicleYear() { return VehicleYear; }
     public void setVehicleYear(int _VehicleYear) {this.VehicleYear = _VehicleYear;}
 
     public int getNumVehicles() { return NumVehicles; }
     public void setNumVehicles(int _NumVehicles) {this.NumVehicles = _NumVehicles;}
+
 
 }
