@@ -4,20 +4,19 @@ Course: IST 242
 Author: Haoyu Cheng
 Date Developed: 4/18/2019
 Last Date Changed: 4/18/2019
-Rev: 2
+Rev: 3
+Revision Made: modifying methods
 */
- 
+
 package com.company;
 
 public class SalesPerson {
     private String SalesmanName;
     private int contact;
 
-    public static void updatecontact(){}
-    public static void assignSalesLead(){}
-    public static void assignVehicle(){}
-    public static void assignVehiclepart(){}
-
+    public static void addSalesPerson(){}
+    public static void addSalesLead(){}
+    public static void addVehicle(){}
 
     public String getSalesmanName(){return SalesmanName; }
     public void setSalesmanName(String _SalesmanName){this.SalesmanName = _SalesmanName;}
@@ -26,11 +25,14 @@ public class SalesPerson {
     public void setContact(int _Contact){this.contact = _Contact;}
 
     // add customer
-    public void getCustomerInfo {
-    
+    public String getCustomerInfo {
+
     }
     // add part
+
     // add vehicle
+    public static void addVehicle(){}
+
     // sell vehicle
-    
+
 }
