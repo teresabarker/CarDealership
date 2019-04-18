@@ -11,6 +11,13 @@ public class Main {
         final char PART_PRINT = 'P';
         final char VEHL_PRINT = 'V';
         final char HELP_CODE = '?';
+        // add part
+        // add vehicle
+        // sell vehicle
+        // get dealership information
+        // create sales lead (sales person) (prompt for customer info)
+        // print sales lead
+        // payment
 
         char userAction;
         final String PROMPT_ACTION = "List 'P'art, List 'V'ehicle, '?'Help,  'E'xit: ";
