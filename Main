@@ -19,7 +19,6 @@ public class Main {
         ArrayList<Vehicle> vehicleList = new ArrayList<>();
 
 
-
         Parts Engine1 = new Parts(PartID.name, PartCategory.engine, "V8");
         Parts Break1 = new Parts(PartID.name, PartCategory.carBreak, "Break 1");
 
