@@ -1,6 +1,19 @@
+/*
+Project: Car Dealership
+Purpose Details: Create a functioning car dealership
+Course: IST 242
+Author: Teresa Barker
+Date Developed: 3/14/19
+Last Date Changed: 4/18/19
+Rev: 4
+ */
+ 
 package com.company;
+
 enum VehicleMake{sedan, truck, SUV, van, sportsCar}
+
 public class Vehicle {
+
     // Variables
     private VehicleMake VehicleMake;
     private String VehicleBrand, VehicleModel;
