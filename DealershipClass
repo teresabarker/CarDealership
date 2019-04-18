@@ -1,0 +1,34 @@
+package com.company;
+
+public class Dealership {
+
+    private String Address;
+    private int PhoneNumber;
+    private String Email;
+    private int Hours;
+
+    public String getAddress() {
+    return Address;
+    }
+    public void setAddress(String newAddress) {
+    this.Address = newAddress; 
+    }
+    public int getPhoneNumber() {
+    return PhoneNumber; 
+    }
+    public void setPhoneNumber(int newPhoneNumber) {
+    this.PhoneNumber = newPhoneNumber; 
+    }
+    public String getEmail() {
+    return Email; 
+    }
+    public void setEmail(String newEmail) {
+    this.Email = newEmail; 
+    }
+    public int getHours() {
+    return Hours;
+    }
+    public void setHours(int newHours) 
+    {this.Hours = newHours; 
+    }
+}
