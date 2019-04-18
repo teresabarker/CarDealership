@@ -1,18 +1,36 @@
 /*
-Project: Car Dealership
-Purpose Details: Create a functioning car dealership
+Project: Car Dealership Salesperson
 Course: IST 242
 Author: Haoyu Cheng
-Date Developed: 3/14/19
-Last Date Changed: 4/18/19
-Rev: 4
- */
+Date Developed: 4/18/2019
+Last Date Changed: 4/18/2019
+Rev: 2
+*/
  
 package com.company;
 
 public class SalesPerson {
+    private String SalesmanName;
+    private int contact;
+
+    public static void updatecontact(){}
+    public static void assignSalesLead(){}
+    public static void assignVehicle(){}
+    public static void assignVehiclepart(){}
+
+
+    public String getSalesmanName(){return SalesmanName; }
+    public void setSalesmanName(String _SalesmanName){this.SalesmanName = _SalesmanName;}
+
+    public int getContact(){return contact; }
+    public void setContact(int _Contact){this.contact = _Contact;}
+
     // add customer
+    public void getCustomerInfo {
+    
+    }
     // add part
     // add vehicle
     // sell vehicle
+    
 }
