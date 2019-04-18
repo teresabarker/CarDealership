@@ -1,0 +1,63 @@
+package com.company;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        
+        final char EXIT_CODE = 'E';
+        final char PART_PRINT = 'P';
+        final char VEHL_PRINT = 'V';
+        final char HELP_CODE = '?';
+
+        char userAction;
+        final String PROMPT_ACTION = "List 'P'art, List 'V'ehicle, '?'Help,  'E'xit: ";
+
+        ArrayList<Parts> partsList  = new ArrayList<>();
+        ArrayList<Vehicle> vehicleList = new ArrayList<>();
+
+
+
+        Parts Engine1 = new Parts(PartID.name, PartCategory.engine, "V8");
+        Parts Break1 = new Parts(PartID.name, PartCategory.carBreak, "Break 1");
+
+        partsList.add(Engine1);
+        partsList.add(Break1);
+
+        Vehicle vehicle = new Vehicle("Ford", "Explorer", VehicleMake.SUV, 5);
+
+        vehicleList.add(vehicle);
+
+        userAction = getAction(PROMPT_ACTION);
+
+        while (userAction != EXIT_CODE) {
+            switch (userAction) {
+                case PART_PRINT:
+                    Inventory.printParts(partsList);
+                    break;
+                case VEHL_PRINT:
+                    Inventory.printVehicle(vehicleList);
+                    break;
+                case HELP_CODE:
+                    getAction(PROMPT_ACTION);
+                    break;
+            }
+
+            userAction = getAction(PROMPT_ACTION);
+        }
+    }
+
+    public static char getAction(String prompt) {
+        Scanner scnr = new Scanner(System.in);
+        String answer = "";
+        System.out.println(prompt);
+        answer = scnr.nextLine().toUpperCase() + " ";
+        char firstChar = answer.charAt(0);
+        return firstChar;
+    }
+
+    }
+
+
