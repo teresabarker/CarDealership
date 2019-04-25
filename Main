@@ -22,14 +22,26 @@ public class Main {
         char userAction;
         final String PROMPT_ACTION = "List Dealership Info (A), List Part (B), List Vehicle (C), Add Sales Lead (D), List Sales Leads (E), Add Part (F), Add Vehicle (G), Sell Vehicle (H), Payment (P), Help (?),  Exit (X): ";
 
-        ArrayList<Parts> partsList  = new ArrayList<>();
+        ArrayList<Parts> partsList = new ArrayList<>();
         ArrayList<Vehicle> vehicleList = new ArrayList<>();
+        ArrayList<SalesLead> salesLeadList = new ArrayList<>();
+        ArrayList<SalesPerson> salesPeople = new ArrayList<>();
 
         Parts Engine1 = new Parts(PartID.name, PartCategory.engine, "V8");
         Parts Break1 = new Parts(PartID.name, PartCategory.carBreak, "Break 1");
 
         partsList.add(Engine1);
         partsList.add(Break1);
+
+        /* FIXME
+        SalesPerson s1 = new SalesPerson("James","Bond", 111111);
+        SalesPerson s2 = new SalesPerson("Barack ","Obama", 222222);
+        SalesPerson s3 = new SalesPerson("Donald","Trump", 333333);
+
+        salesPeople.add(s1);
+        salesPeople.add(s2);
+        salesPeople.add(s3);
+        */
 
         Vehicle vehicle = new Vehicle("Ford", "Explorer", VehicleMake.SUV, 5);
 
@@ -50,21 +62,27 @@ public class Main {
                     break;
                 case ADD_PART:
                     // add part
+                    // FIXME partsList.add(main.addPart());
                     break;
                 case ADD_VEHICLE:
                     // add vehicle
+                    // FIXME vehicleList.add(main.addVehicle());
                     break;
                 case SELL_VEHICLE:
                     // sell vehicle
+                    // FIXME
                     break;
                 case DEAL_INFO:
                     // print dealer info
+                    // FIXME Dealership.printInfo;
                     break;
                 case ADD_SALES_LEAD:
                     // add sales lead
+                    // FIXME salesLeadList.add(main.addSalesLead());
                     break;
                 case SALES_LEAD_PRINT:
                     // print sales lead
+                    //FIXME SalesLead.listSalesLeads(salesLeadList);
                     break;
                 case PAYMENT:
                     // payment
@@ -84,7 +102,28 @@ public class Main {
         return firstChar;
     }
 
+    /* FIXME add these methods
+
+    public SalesLead addSalesLead() {
+    }
+
+    public Vehicle addVehicle() {
+    }
+
+    public Vehicle sellVehicle() {
+    }
+
+    public Parts addPart() {
+    }
+
+    public Payment makePayment() {
+    }
+
+
+
+    */
 }
+
 
 
 
