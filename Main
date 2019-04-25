@@ -1,13 +1,3 @@
-/*
-Project: Car Dealership
-Purpose Details: Create a functioning car dealership
-Course: IST 242
-Author: Team 1
-Date Developed: 3/14/19
-Last Date Changed: 4/18/19
-Rev: 4
- */
- 
 package com.company;
 
 import java.util.ArrayList;
@@ -16,25 +6,24 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        
-        final char EXIT_CODE = 'E';
-        final char PART_PRINT = 'P';
-        final char VEHL_PRINT = 'V';
+
+        final char DEAL_INFO = 'A';
+        final char PART_PRINT = 'B';
+        final char VEHL_PRINT = 'C';
+        final char ADD_SALES_LEAD = 'D';
+        final char SALES_LEAD_PRINT = 'E';
+        final char ADD_PART = 'F';
+        final char ADD_VEHICLE = 'G';
+        final char SELL_VEHICLE = 'H';
         final char HELP_CODE = '?';
-        // add part
-        // add vehicle
-        // sell vehicle
-        // get dealership information
-        // create sales lead (sales person) (prompt for customer info)
-        // print sales lead
-        // payment
+        final char PAYMENT = 'P';
+        final char EXIT_CODE = 'X';
 
         char userAction;
-        final String PROMPT_ACTION = "List 'P'art, List 'V'ehicle, '?'Help,  'E'xit: ";
+        final String PROMPT_ACTION = "List Dealership Info (A), List Part (B), List Vehicle (C), Add Sales Lead (D), List Sales Leads (E), Add Part (F), Add Vehicle (G), Sell Vehicle (H), Payment (P), Help (?),  Exit (X): ";
 
         ArrayList<Parts> partsList  = new ArrayList<>();
         ArrayList<Vehicle> vehicleList = new ArrayList<>();
-
 
         Parts Engine1 = new Parts(PartID.name, PartCategory.engine, "V8");
         Parts Break1 = new Parts(PartID.name, PartCategory.carBreak, "Break 1");
@@ -59,6 +48,27 @@ public class Main {
                 case HELP_CODE:
                     getAction(PROMPT_ACTION);
                     break;
+                case ADD_PART:
+                    // add part
+                    break;
+                case ADD_VEHICLE:
+                    // add vehicle
+                    break;
+                case SELL_VEHICLE:
+                    // sell vehicle
+                    break;
+                case DEAL_INFO:
+                    // print dealer info
+                    break;
+                case ADD_SALES_LEAD:
+                    // add sales lead
+                    break;
+                case SALES_LEAD_PRINT:
+                    // print sales lead
+                    break;
+                case PAYMENT:
+                    // payment
+                    break;
             }
 
             userAction = getAction(PROMPT_ACTION);
@@ -74,6 +84,7 @@ public class Main {
         return firstChar;
     }
 
-    }
+}
+
 
 
