@@ -8,36 +8,38 @@ Last Date Changed: 4/18/19
 Rev: 4
  */
  
-package com.company;
+package edu.psu.ist.ab.ist242.team1;
 
-enum PartCategory{suspension, gear, carBreak, vehicleFrame, engine, tire, wheel, }
 enum PartID{name}
 
 public class Parts {
 
-    private PartID partID;
+    private int partID;
     private String  name;
-    private PartCategory partCategory;
-    public Parts(PartID _partID, PartCategory _partCategory, String _name){
+    private String partCategory;
+
+    public Parts(int _partID, String _partCategory, String _name){
         super();
         this.name = _name;
         this.partCategory = _partCategory;
         this.partID = _partID;
     }
 
+    public Parts() { ++partID;}
 
 
-    public PartID getPartID(){
+    public int getPartID(){
         return partID;
     }
-    public void setPartID(PartID randomID){this.partID = randomID;}
+    public void setPartID(int randomID){this.partID = randomID;}
 
     public String getName(){return name;}
 
     public void setName(String partName){this.name = partName;}
 
-    public PartCategory getPartCategory() {
+    public String getPartCategory() {
         return partCategory;
     }
-    public void setPartCategory(PartCategory _partCategory){this.partCategory = _partCategory;}
+    public void setPartCategory(String _partCategory){this.partCategory = _partCategory;}
 }
+
