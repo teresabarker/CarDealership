@@ -1,1 +1,17 @@
-// Add unit tests for methods
+/*
+Project: Car Dealership
+Purpose Details: Create a functioning car dealership
+Course: IST 242
+Author: Team 1
+Date Developed: 4/30/19
+Last Date Changed: 4/30/19
+Rev: 1
+ */
+
+package edu.psu.ist.ab.ist242.team1;
+
+public class Tests {
+
+  // Add unit tests for methods
+
+}
