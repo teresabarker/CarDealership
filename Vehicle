@@ -4,42 +4,53 @@ Purpose Details: Create a functioning car dealership
 Course: IST 242
 Author: Teresa Barker
 Date Developed: 3/14/19
-Last Date Changed: 4/29/19
+Last Date Changed: 4/30/19
 Rev: 5
  */
 
-package com.company;
-
-enum VehicleMake{sedan, truck, SUV, van, sportsCar}
+package edu.psu.ist.ab.ist242.team1;
 
 public class Vehicle {
 
+    /**
+     * Hold all the vehicle information
+     *
+     * @param vehicleID     variable
+     * @param VehicleBrand  variable
+     * @param VehicleModel  variable
+     * @param VehicleMake   variable
+     * @param VehicleYear   variable
+     * @author              Teresa Barker
+     * @version             1.0
+     * @since               2019-04-30
+     */
+
     // Variables
     private int vehicleID = 0;
-    private String VehicleBrand, VehicleModel, VehicleMake;
-    private int VehicleYear;
+    private String vehicleBrand, vehicleModel, vehicleMake;
+    private int vehicleYear;
 
     // Constructor Methods
-    public Vehicle(String _vehicleBrand, String _vehicleModel, String _vehicleMake, int _VehicleYear){
-        this.VehicleBrand = _vehicleBrand;
-        this.VehicleMake = _vehicleMake;
-        this.VehicleModel = _vehicleModel;
-        this.VehicleYear = _VehicleYear;
+    public Vehicle(String _vehicleBrand, String _vehicleModel, String _vehicleMake, int _vehicleYear){
+        this.vehicleBrand = _vehicleBrand;
+        this.vehicleMake = _vehicleMake;
+        this.vehicleModel = _vehicleModel;
+        this.vehicleYear = _vehicleYear;
     }
 
-    public Vehicle() { vehicleID++;}
+    public Vehicle() { ++vehicleID;}
 
     //Setters and Getters
-    public String getVehicleBrand() { return VehicleBrand; }
-    public void setVehicleBrand(String _VehicleBrand) {this.VehicleBrand = _VehicleBrand;}
+    public String getVehicleBrand() { return vehicleBrand; }
+    public void setVehicleBrand(String _vehicleBrand) {this.vehicleBrand = _vehicleBrand;}
 
-    public String getVehicleModel() { return VehicleModel; }
-    public void setVehicleModel(String _VehicleModel) {this.VehicleModel = _VehicleModel;}
+    public String getVehicleModel() { return vehicleModel; }
+    public void setVehicleModel(String _vehicleModel) {this.vehicleModel = _vehicleModel;}
 
-    public String getVehicleMake() { return VehicleMake; }
-    public void setVehicleMake(String _VehicleMake) {this.VehicleMake = _VehicleMake;}
+    public String getVehicleMake() { return vehicleMake; }
+    public void setVehicleMake(String _vehicleMake) {this.vehicleMake = _vehicleMake;}
 
-    public int getVehicleYear() { return VehicleYear; }
-    public void setVehicleYear(int _VehicleYear) {this.VehicleYear = _VehicleYear;}
+    public int getVehicleYear() { return vehicleYear; }
+    public void setVehicleYear(int _vehicleYear) {this.vehicleYear = _vehicleYear;}
 
 }
