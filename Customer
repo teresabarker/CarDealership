@@ -7,8 +7,8 @@ Date Developed: 3/14/19
 Last Date Changed: 4/18/19
 Rev: 4
  */
- 
-package com.company;
+
+package edu.psu.ist.ab.ist242.team1;
 
 public class Customer {
 
@@ -30,3 +30,4 @@ public class Customer {
     public String getCustomerLastName() {return CustomerLastName;}
 
 }
+
