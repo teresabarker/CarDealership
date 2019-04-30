@@ -4,8 +4,8 @@ Purpose Details: Create a functioning car dealership
 Course: IST 242
 Author: Michael Janoski
 Date Developed: 3/14/19
-Last Date Changed: 4/18/19
-Rev: 4
+Last Date Changed: 4/29/19
+Rev: 5
  */
 
 package com.company;
@@ -13,32 +13,41 @@ package com.company;
 public class Dealership {
 
     private String Address;
-    private int PhoneNumber;
+    private String PhoneNumber;
     private String Email;
-    private int Hours;
+    private String Hours;
+
+
+    public Dealership(String _Address, String _PhoneNumber, String _Email, String _Hours){
+        this.Address = _Address;
+        this.PhoneNumber = _PhoneNumber;
+        this.Email = _Email;
+        this.Hours = _Hours;
+    }
 
     public String getAddress() {
-    return Address;
+        return Address;
     }
     public void setAddress(String newAddress) {
-    this.Address = newAddress; 
+        this.Address = newAddress;
     }
-    public int getPhoneNumber() {
-    return PhoneNumber; 
+    public String getPhoneNumber() {
+        return PhoneNumber;
     }
-    public void setPhoneNumber(int newPhoneNumber) {
-    this.PhoneNumber = newPhoneNumber; 
+    public void setPhoneNumber(String newPhoneNumber) {
+        this.PhoneNumber = newPhoneNumber;
     }
     public String getEmail() {
-    return Email; 
+        return Email;
     }
     public void setEmail(String newEmail) {
-    this.Email = newEmail; 
+        this.Email = newEmail;
     }
-    public int getHours() {
-    return Hours;
+    public String getHours() {
+        return Hours;
     }
-    public void setHours(int newHours) 
-    {this.Hours = newHours; 
+    public void setHours(String newHours)
+    {this.Hours = newHours;
     }
 }
+
