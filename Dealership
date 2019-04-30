@@ -8,7 +8,7 @@ Last Date Changed: 4/29/19
 Rev: 5
  */
 
-package com.company;
+package edu.psu.ist.ab.ist242.team1;
 
 public class Dealership {
 
@@ -50,4 +50,6 @@ public class Dealership {
     {this.Hours = newHours;
     }
 }
+
+
 
