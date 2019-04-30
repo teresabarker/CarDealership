@@ -7,6 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Main main = new Main();
+
         final char DEAL_INFO = 'A';
         final char PART_PRINT = 'B';
         final char VEHL_PRINT = 'C';
@@ -20,10 +22,11 @@ public class Main {
         final char EXIT_CODE = 'X';
 
         char userAction;
-        final String PROMPT_ACTION = "List Dealership Info (A), List Part (B), List Vehicle (C), Add Sales Lead (D), List Sales Leads (E), Add Part (F), Add Vehicle (G), Sell Vehicle (H), Payment (P), Help (?),  Exit (X): ";
+        final String PROMPT_ACTION = "Dealership Info (A), List Part (B), List Vehicle (C), Add Sales Lead (D), List Sales Lead (E), Add Part (F), Add Vehicle (G), Sell Vehicle (H), Payment (P),  Exit (X): ";
 
         ArrayList<Parts> partsList = new ArrayList<>();
         ArrayList<Vehicle> vehicleList = new ArrayList<>();
+        ArrayList<Vehicle> vehiclesSold = new ArrayList<>();
         ArrayList<SalesLead> salesLeadList = new ArrayList<>();
         ArrayList<SalesPerson> salesPeople = new ArrayList<>();
 
@@ -43,9 +46,11 @@ public class Main {
         salesPeople.add(s3);
         */
 
-        Vehicle vehicle = new Vehicle("Ford", "Explorer", VehicleMake.SUV, 5);
+        Vehicle vehicle1 = new Vehicle("Ford", "Explorer", "SUV", 5);
 
-        vehicleList.add(vehicle);
+        Dealership dealershipInfo = new Dealership("123 Woodland Rd. Abington, PA 19001", "215-098-1243", "Team1CarDealership@gmail.com", "Open daily 9am-5pm" );
+
+        vehicleList.add(vehicle1);
 
         userAction = getAction(PROMPT_ACTION);
 
@@ -65,16 +70,17 @@ public class Main {
                     // FIXME partsList.add(main.addPart());
                     break;
                 case ADD_VEHICLE:
-                    // add vehicle
-                    // FIXME vehicleList.add(main.addVehicle());
+                    vehicleList.add(main.addVehicle());
                     break;
                 case SELL_VEHICLE:
-                    // sell vehicle
-                    // FIXME
+                    vehiclesSold.add(main.sellVehicle());
                     break;
                 case DEAL_INFO:
-                    // print dealer info
-                    // FIXME Dealership.printInfo;
+                    System.out.println("Address: " + dealershipInfo.getAddress());
+                    System.out.println("Phone: " + dealershipInfo.getPhoneNumber());
+                    System.out.println("Email: " + dealershipInfo.getEmail());
+                    System.out.println("Hours: " + dealershipInfo.getHours() + "\n");
+
                     break;
                 case ADD_SALES_LEAD:
                     // add sales lead
@@ -102,28 +108,48 @@ public class Main {
         return firstChar;
     }
 
-    /* FIXME add these methods
-
-    public SalesLead addSalesLead() {
-    }
-
     public Vehicle addVehicle() {
+        Vehicle vehl = new Vehicle();
+        Scanner scnr = new Scanner(System.in);
+        System.out.println("Please enter the following information about your vehicle.");
+        System.out.println("Brand: ");
+        vehl.setVehicleBrand(scnr.nextLine());
+        System.out.println("Model: ");
+        vehl.setVehicleModel(scnr.nextLine());
+        System.out.println("Make: ");
+        vehl.setVehicleMake(scnr.nextLine());
+        System.out.println("Year: ");
+        vehl.setVehicleYear(scnr.nextInt());
+        return vehl;
     }
 
     public Vehicle sellVehicle() {
+        Vehicle vehl = new Vehicle();
+        Scanner scnr = new Scanner(System.in);
+        System.out.println("We're happy you'd like to buy a vehicle!");
+        System.out.println("Please tell us about the vehicle you'd like to purchase.");
+        System.out.println("Brand: ");
+        vehl.setVehicleBrand(scnr.nextLine());
+        System.out.println("Model: ");
+        vehl.setVehicleModel(scnr.nextLine());
+        System.out.println("Make: ");
+        vehl.setVehicleMake(scnr.nextLine());
+        System.out.println("Year: ");
+        vehl.setVehicleYear(scnr.nextInt());
+        return vehl;
+    }
+
+    /* FIXME add these methods
+
+    public SalesLead addSalesLead() {
+        SalesLead.
     }
 
     public Parts addPart() {
     }
 
-    public Payment makePayment() {
-    }
-
-
-
     */
 }
-
 
 
 
