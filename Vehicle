@@ -4,10 +4,10 @@ Purpose Details: Create a functioning car dealership
 Course: IST 242
 Author: Teresa Barker
 Date Developed: 3/14/19
-Last Date Changed: 4/18/19
-Rev: 4
+Last Date Changed: 4/29/19
+Rev: 5
  */
- 
+
 package com.company;
 
 enum VehicleMake{sedan, truck, SUV, van, sportsCar}
@@ -15,16 +15,19 @@ enum VehicleMake{sedan, truck, SUV, van, sportsCar}
 public class Vehicle {
 
     // Variables
-    private VehicleMake VehicleMake;
-    private String VehicleBrand, VehicleModel;
-    private int VehicleYear, NumVehicles;
+    private int vehicleID = 0;
+    private String VehicleBrand, VehicleModel, VehicleMake;
+    private int VehicleYear;
 
-    public Vehicle(String _vehicleBrand, String _vehicleModel, VehicleMake _vehicleMake, int _VehicleYear){
+    // Constructor Methods
+    public Vehicle(String _vehicleBrand, String _vehicleModel, String _vehicleMake, int _VehicleYear){
         this.VehicleBrand = _vehicleBrand;
         this.VehicleMake = _vehicleMake;
         this.VehicleModel = _vehicleModel;
         this.VehicleYear = _VehicleYear;
     }
+
+    public Vehicle() { vehicleID++;}
 
     //Setters and Getters
     public String getVehicleBrand() { return VehicleBrand; }
@@ -33,14 +36,10 @@ public class Vehicle {
     public String getVehicleModel() { return VehicleModel; }
     public void setVehicleModel(String _VehicleModel) {this.VehicleModel = _VehicleModel;}
 
-    public VehicleMake getVehicleMake() { return VehicleMake; }
-    public void setVehicleMake(VehicleMake _VehicleMake) {this.VehicleMake = _VehicleMake;}
+    public String getVehicleMake() { return VehicleMake; }
+    public void setVehicleMake(String _VehicleMake) {this.VehicleMake = _VehicleMake;}
 
     public int getVehicleYear() { return VehicleYear; }
     public void setVehicleYear(int _VehicleYear) {this.VehicleYear = _VehicleYear;}
-
-    public int getNumVehicles() { return NumVehicles; }
-    public void setNumVehicles(int _NumVehicles) {this.NumVehicles = _NumVehicles;}
-
 
 }
