@@ -1,4 +1,14 @@
-package com.company;
+/*
+Project: Car Dealership
+Purpose Details: Create a functioning car dealership
+Course: IST 242
+Author: Team 1
+Date Developed: 3/14/19
+Last Date Changed: 4/30/19
+Rev: 5
+ */
+
+package edu.psu.ist.ab.ist242.team1;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -30,11 +40,13 @@ public class Main {
         ArrayList<SalesLead> salesLeadList = new ArrayList<>();
         ArrayList<SalesPerson> salesPeople = new ArrayList<>();
 
-        Parts Engine1 = new Parts(PartID.name, PartCategory.engine, "V8");
-        Parts Break1 = new Parts(PartID.name, PartCategory.carBreak, "Break 1");
+        Parts part1 = new Parts(1, "Car Break", "Breaks");
+        Parts part2 = new Parts(2, "Headlight", "Accessories");
+        Parts part3 = new Parts(3, "Ford Engine", "Engines");
 
-        partsList.add(Engine1);
-        partsList.add(Break1);
+        partsList.add(part1);
+        partsList.add(part2);
+        partsList.add(part3);
 
         /* FIXME
         SalesPerson s1 = new SalesPerson("James","Bond", 111111);
@@ -66,8 +78,7 @@ public class Main {
                     getAction(PROMPT_ACTION);
                     break;
                 case ADD_PART:
-                    // add part
-                    // FIXME partsList.add(main.addPart());
+                    partsList.add(main.addPart());
                     break;
                 case ADD_VEHICLE:
                     vehicleList.add(main.addVehicle());
@@ -139,17 +150,24 @@ public class Main {
         return vehl;
     }
 
+
+    public Parts addPart() {
+        Parts part = new Parts();
+        Scanner scnr = new Scanner(System.in);
+        System.out.println("Please enter the following information about the vehicle part.");
+        System.out.println("Part name: ");
+        part.setName(scnr.nextLine());
+        System.out.println("Category: ");
+        part.setPartCategory(scnr.nextLine());
+        return part;
+    }
+
     /* FIXME add these methods
 
     public SalesLead addSalesLead() {
         SalesLead.
     }
 
-    public Parts addPart() {
-    }
-
     */
 }
-
-
 
