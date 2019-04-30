@@ -8,7 +8,7 @@ Last Date Changed: 4/18/19
 Rev: 4
  */
  
-package com.company;
+package edu.psu.ist.ab.ist242.team1;
 
 import java.util.Date;
 
@@ -25,9 +25,9 @@ public class SalesLead {
 
     //Constructor method
     public SalesLead(int _SalesLeadId, String _SalesLeadFirstName, String _SalesLeadLastName) {
-       this.SalesLeadId = _SalesLeadId;
-       this.SalesLeadFirstName = _SalesLeadFirstName;
-       this.SalesLeadLastName = _SalesLeadLastName;
+        this.SalesLeadId = _SalesLeadId;
+        this.SalesLeadFirstName = _SalesLeadFirstName;
+        this.SalesLeadLastName = _SalesLeadLastName;
 
     }
 
