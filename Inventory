@@ -8,7 +8,7 @@ Last Date Changed: 4/18/19
 Rev: 4
  */
  
- package com.company;
+package edu.psu.ist.ab.ist242.team1;
 
 import java.util.ArrayList;
 
@@ -17,41 +17,42 @@ public class Inventory {
     private ArrayList vehicleList;
 
     public Inventory() {
-            vehicleList = new ArrayList<Vehicle>();
-            partsList = new ArrayList<Parts>();
-        }
+        vehicleList = new ArrayList<Vehicle>();
+        partsList = new ArrayList<Parts>();
+    }
 
-        public Vehicle getVehicle(int _vehicle) {
-            return (Vehicle) vehicleList.get(_vehicle);
-        }
+    public Vehicle getVehicle(int _vehicle) {
+        return (Vehicle) vehicleList.get(_vehicle);
+    }
 
-        public void setVehicle(Vehicle _vehicle) {
-            vehicleList.add(_vehicle);
-        }
+    public void setVehicle(Vehicle _vehicle) {
+        vehicleList.add(_vehicle);
+    }
 
-        public Parts getParts(int _parts) {
-            return (Parts) partsList.get(_parts);
-        }
+    public Parts getParts(int _parts) {
+        return (Parts) partsList.get(_parts);
+    }
 
-        public void setParts(Parts _parts) {
-            partsList.add(_parts);
-        }
+    public void setParts(Parts _parts) {
+        partsList.add(_parts);
+    }
 
-        public static void printParts(ArrayList<Parts> partsList){
-            for ( Parts parts : partsList) {
-                System.out.println("Part ID: " + parts.getPartID());
-                System.out.println("Part Name: " +parts.getName());
-                System.out.println("Part category: " + parts.getPartCategory());
+    public static void printParts(ArrayList<Parts> partsList){
+        for ( Parts parts : partsList) {
+            System.out.println("Part ID: " + parts.getPartID());
+            System.out.println("Part Name: " +parts.getName());
+            System.out.println("Part category: " + parts.getPartCategory());
 
-            }
-        }
-        public static void printVehicle(ArrayList<Vehicle> vehicleList){
-            for (Vehicle vehicle : vehicleList) {
-                System.out.println("Vehicle Brand: " + vehicle.getVehicleBrand());
-                System.out.println("Vehicle model: " + vehicle.getVehicleModel());
-                System.out.println("Vehicle Make: " + vehicle.getVehicleMake());
-                System.out.println("Vehicle Year: " + vehicle.getVehicleYear());
-
-            }
         }
     }
+    public static void printVehicle(ArrayList<Vehicle> vehicleList){
+        for (Vehicle vehicle : vehicleList) {
+            System.out.println("Vehicle Brand: " + vehicle.getVehicleBrand());
+            System.out.println("Vehicle model: " + vehicle.getVehicleModel());
+            System.out.println("Vehicle Make: " + vehicle.getVehicleMake());
+            System.out.println("Vehicle Year: " + vehicle.getVehicleYear() + "\n");
+
+        }
+    }
+}
+
