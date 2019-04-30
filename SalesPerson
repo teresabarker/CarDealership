@@ -8,7 +8,7 @@ Rev: 3
 Revision Made: modifying methods
 */
 
-package com.company;
+package edu.psu.ist.ab.ist242.team1;
 
 public class SalesPerson {
     private String SalesmanName;
@@ -16,23 +16,11 @@ public class SalesPerson {
 
     public static void addSalesPerson(){}
     public static void addSalesLead(){}
-    public static void addVehicle(){}
 
     public String getSalesmanName(){return SalesmanName; }
     public void setSalesmanName(String _SalesmanName){this.SalesmanName = _SalesmanName;}
 
     public int getContact(){return contact; }
     public void setContact(int _Contact){this.contact = _Contact;}
-
-    // add customer
-    public String getCustomerInfo {
-
-    }
-    // add part
-
-    // add vehicle
-    public static void addVehicle(){}
-
-    // sell vehicle
 
 }
