@@ -5,7 +5,7 @@ Course: IST 242
 Author: Team 1
 Date Developed: 03/14/19
 Last Date Changed: 05/01/19
-Rev: 6
+Rev: 8
  */
 
 package edu.psu.ist.ab.ist242.team1;
@@ -28,11 +28,10 @@ public class Main {
         final char ADD_VEHICLE = 'G';
         final char SELL_VEHICLE = 'H';
         final char HELP_CODE = '?';
-        final char PAYMENT = 'P';
         final char EXIT_CODE = 'X';
 
         char userAction;
-        final String PROMPT_ACTION = "Dealership Info (A), List Part (B), List Vehicle (C), Add Sales Lead (D), List Sales Lead (E), Add Part (F), Add Vehicle (G), Sell Vehicle (H), Payment (P),  Exit (X): ";
+        final String PROMPT_ACTION = "Dealership Info (A), List Part (B), List Vehicle (C), Add Sales Lead (D), List Sales Lead (E), Add Part (F), Add Vehicle (G), Sell Vehicle (H), Exit (X): ";
 
         ArrayList<Parts> partsList = new ArrayList<>();
         ArrayList<Vehicle> vehicleList = new ArrayList<>();
@@ -49,8 +48,8 @@ public class Main {
         partsList.add(part3);
 
         SalesLead lead1 = new SalesLead(1, "Barack", "Obama");
-        SalesLead lead2 = new SalesLead(1, "Hillary", "Clinton");
-        SalesLead lead3 = new SalesLead(1, "Beto", "O'Rourke");
+        SalesLead lead2 = new SalesLead(2, "Hillary", "Clinton");
+        SalesLead lead3 = new SalesLead(3, "Beto", "O'Rourke");
 
         salesLeadList.add(lead1);
         salesLeadList.add(lead2);
@@ -64,11 +63,15 @@ public class Main {
         salesPeople.add(person2);
         salesPeople.add(person3);
 
-        Vehicle vehicle1 = new Vehicle("Ford", "Explorer", "SUV", 5);
-
-        Dealership dealershipInfo = new Dealership("123 Woodland Rd. Abington, PA 19001", "215-098-1243", "Team1CarDealership@gmail.com", "Open daily 9am-5pm" );
+        Vehicle vehicle1 = new Vehicle("Ford", "Explorer", "SUV", 2015);
+        Vehicle vehicle2 = new Vehicle("Honda", "Civic", "Sedan", 2017);
+        Vehicle vehicle3 = new Vehicle("Chevy", "Silverado", "Truck", 2018);
 
         vehicleList.add(vehicle1);
+        vehicleList.add(vehicle2);
+        vehicleList.add(vehicle3);
+
+        Dealership dealershipInfo = new Dealership("123 Woodland Rd. Abington, PA 19001", "215-098-1243", "Team1CarDealership@gmail.com", "Open daily 9am-5pm" );
 
         userAction = getAction(PROMPT_ACTION);
 
@@ -105,9 +108,6 @@ public class Main {
                 case SALES_LEAD_PRINT:
                     SalesLead.listSalesLeads(salesLeadList);
                     break;
-                case PAYMENT:
-                    // payment
-                    break;
             }
 
             userAction = getAction(PROMPT_ACTION);
@@ -135,6 +135,7 @@ public class Main {
         vehl.setVehicleMake(scnr.nextLine());
         System.out.println("Year: ");
         vehl.setVehicleYear(scnr.nextInt());
+        System.out.print("\n");
         return vehl;
     }
 
@@ -151,6 +152,7 @@ public class Main {
         vehl.setVehicleMake(scnr.nextLine());
         System.out.println("Year: ");
         vehl.setVehicleYear(scnr.nextInt());
+        System.out.print("\n");
         return vehl;
     }
 
@@ -160,9 +162,10 @@ public class Main {
         Scanner scnr = new Scanner(System.in);
         System.out.println("Please enter the following information about the vehicle part.");
         System.out.println("Part name: ");
-        part.setName(scnr.nextLine());
+        part.setPartName(scnr.nextLine());
         System.out.println("Category: ");
         part.setPartCategory(scnr.nextLine());
+        System.out.print("\n");
         return part;
     }
 
@@ -173,6 +176,9 @@ public class Main {
         lead.setSalesLeadFirstName(scnr.nextLine());
         System.out.println("Enter lead's last name:");
         lead.setSalesLeadLastName(scnr.nextLine());
+        System.out.print("\n");
         return lead;
     }
 }
+
+
