@@ -3,9 +3,9 @@ Project: Car Dealership
 Purpose Details: Create a functioning car dealership
 Course: IST 242
 Author: Team 1
-Date Developed: 3/14/19
-Last Date Changed: 4/30/19
-Rev: 5
+Date Developed: 03/14/19
+Last Date Changed: 05/01/19
+Rev: 6
  */
 
 package edu.psu.ist.ab.ist242.team1;
@@ -48,15 +48,21 @@ public class Main {
         partsList.add(part2);
         partsList.add(part3);
 
-        /* FIXME
-        SalesPerson s1 = new SalesPerson("James","Bond", 111111);
-        SalesPerson s2 = new SalesPerson("Barack ","Obama", 222222);
-        SalesPerson s3 = new SalesPerson("Donald","Trump", 333333);
+        SalesLead lead1 = new SalesLead(1, "Barack", "Obama");
+        SalesLead lead2 = new SalesLead(1, "Hillary", "Clinton");
+        SalesLead lead3 = new SalesLead(1, "Beto", "O'Rourke");
 
-        salesPeople.add(s1);
-        salesPeople.add(s2);
-        salesPeople.add(s3);
-        */
+        salesLeadList.add(lead1);
+        salesLeadList.add(lead2);
+        salesLeadList.add(lead3);
+
+        SalesPerson person1 = new SalesPerson("John", "Smith");
+        SalesPerson person2 = new SalesPerson("Amy", "Doe");
+        SalesPerson person3 = new SalesPerson("Henry", "Johnson");
+
+        salesPeople.add(person1);
+        salesPeople.add(person2);
+        salesPeople.add(person3);
 
         Vehicle vehicle1 = new Vehicle("Ford", "Explorer", "SUV", 5);
 
@@ -94,12 +100,10 @@ public class Main {
 
                     break;
                 case ADD_SALES_LEAD:
-                    // add sales lead
-                    // FIXME salesLeadList.add(main.addSalesLead());
+                    salesLeadList.add(main.addSalesLead());
                     break;
                 case SALES_LEAD_PRINT:
-                    // print sales lead
-                    //FIXME SalesLead.listSalesLeads(salesLeadList);
+                    SalesLead.listSalesLeads(salesLeadList);
                     break;
                 case PAYMENT:
                     // payment
@@ -162,12 +166,13 @@ public class Main {
         return part;
     }
 
-    /* FIXME add these methods
-
     public SalesLead addSalesLead() {
-        SalesLead.
+        SalesLead lead = new SalesLead();
+        Scanner scnr = new Scanner(System.in);
+        System.out.println("Enter lead's first name:");
+        lead.setSalesLeadFirstName(scnr.nextLine());
+        System.out.println("Enter lead's last name:");
+        lead.setSalesLeadLastName(scnr.nextLine());
+        return lead;
     }
-
-    */
 }
-
