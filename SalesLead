@@ -4,13 +4,14 @@ Purpose Details: Create a functioning car dealership
 Course: IST 242
 Author: Mosam Ray
 Date Developed: 3/14/19
-Last Date Changed: 4/18/19
-Rev: 4
+Last Date Changed: 5/1/19
+Rev: 5
  */
  
 package edu.psu.ist.ab.ist242.team1;
 
 import java.util.Date;
+import java.util.ArrayList;
 
 public class SalesLead {
 
@@ -28,15 +29,9 @@ public class SalesLead {
         this.SalesLeadId = _SalesLeadId;
         this.SalesLeadFirstName = _SalesLeadFirstName;
         this.SalesLeadLastName = _SalesLeadLastName;
-
     }
 
-
-    public void printAllInformation(){
-        System.out.println(SalesLeadId);
-        System.out.println(SalesLeadFirstName);
-        System.out.println(SalesLeadLastName);
-    }
+    public SalesLead() { ++SalesLeadId;}
 
     //Method Members
     //Setters and Getters
@@ -55,4 +50,10 @@ public class SalesLead {
     public void setSalesLeadLastName(String _SalesLeadLastName) {
         this.SalesLeadLastName = _SalesLeadLastName;}
 
+    public static void listSalesLeads(ArrayList<SalesLead> salesLeadList) {
+        for (SalesLead lead: salesLeadList) {
+            System.out.println("SalesLead ID: " + lead.getSalesLeadId());
+            System.out.println("SalesLead Name: " + lead.getSalesLeadFistName() + " " + lead.getSalesLeadLastName());
+        }
+    }
 }
