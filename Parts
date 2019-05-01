@@ -7,20 +7,31 @@ Date Developed: 3/14/19
 Last Date Changed: 4/18/19
 Rev: 4
  */
- 
+
 package edu.psu.ist.ab.ist242.team1;
 
 enum PartID{name}
 
 public class Parts {
 
+    /**
+     * Hold all the vehicle parts information
+     *
+     * @param partID        variable
+     * @param partName      variable
+     * @param partCategory  variable
+     * @author              Tim McCreesh
+     * @version             1.0
+     * @since               2019-04-30
+     */
+
     private int partID;
-    private String  name;
+    private String partName;
     private String partCategory;
 
-    public Parts(int _partID, String _partCategory, String _name){
+    public Parts(int _partID, String _partCategory, String _partName){
         super();
-        this.name = _name;
+        this.partName = _partName;
         this.partCategory = _partCategory;
         this.partID = _partID;
     }
@@ -33,13 +44,13 @@ public class Parts {
     }
     public void setPartID(int randomID){this.partID = randomID;}
 
-    public String getName(){return name;}
-
-    public void setName(String partName){this.name = partName;}
+    public String getPartName(){return partName;}
+    public void setPartName(String partName){this.partName = partName;}
 
     public String getPartCategory() {
         return partCategory;
     }
     public void setPartCategory(String _partCategory){this.partCategory = _partCategory;}
 }
+
 
