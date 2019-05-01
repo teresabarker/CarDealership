@@ -7,7 +7,7 @@ Date Developed: 3/14/19
 Last Date Changed: 5/1/19
 Rev: 5
  */
- 
+
 package edu.psu.ist.ab.ist242.team1;
 
 import java.util.Date;
@@ -15,7 +15,18 @@ import java.util.ArrayList;
 
 public class SalesLead {
 
-    //Data Members
+    /**
+     * Hold all the SalesLead information
+     *
+     * @param SalesLeadID         variable
+     * @param SalesLeadFirstName  variable
+     * @param SalesLeadLastName   variable
+     * @author                    Mosam Ray
+     * @version                   1.0
+     * @since                     2019-05-01
+     */
+
+    // Variables
     private int SalesLeadId;
     private String SalesLeadFirstName;
     private String SalesLeadLastName;
@@ -57,3 +68,4 @@ public class SalesLead {
         }
     }
 }
+
