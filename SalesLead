@@ -15,10 +15,21 @@ import java.util.ArrayList;
 
 public class SalesLead {
 
-    //Data Members
+/**
+     * Hold all the SalesLead information
+     *
+     * @param SalesLeadID         variable
+     * @param SalesLeadFirstName  variable
+     * @param SalesLeadLasttName  variable
+     * @author                    Mosam Ray
+     * @version                   1.0
+     * @since                     2019-05-01
+     */
+
+    // Variables
     private int SalesLeadId;
     private String SalesLeadFirstName;
-    private String SalesLeadLastName;
+    private String SalesLeadLasttName;
     //address
     private Date SalesLeadDate;
     //private SalesPerson SalesLeadAssignedTo;
