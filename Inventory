@@ -7,12 +7,24 @@ Date Developed: 3/14/19
 Last Date Changed: 4/18/19
 Rev: 4
  */
- 
+
 package edu.psu.ist.ab.ist242.team1;
 
 import java.util.ArrayList;
 
 public class Inventory {
+
+    /**
+     * Hold all the inventory information
+     *
+     * @param vehicleList   ArrayList
+     * @param partList      ArrayList
+     * @param partCategory  variable
+     * @author              Tim McCreesh
+     * @version             1.0
+     * @since               2019-04-30
+     */
+
     private ArrayList<Parts> partsList;
     private ArrayList vehicleList;
 
@@ -39,10 +51,8 @@ public class Inventory {
 
     public static void printParts(ArrayList<Parts> partsList){
         for ( Parts parts : partsList) {
-            System.out.println("Part ID: " + parts.getPartID());
-            System.out.println("Part Name: " +parts.getName());
-            System.out.println("Part category: " + parts.getPartCategory());
-
+            System.out.println("Part Name: " +parts.getPartName());
+            System.out.println("Part category: " + parts.getPartCategory() + "\n");
         }
     }
     public static void printVehicle(ArrayList<Vehicle> vehicleList){
@@ -51,8 +61,8 @@ public class Inventory {
             System.out.println("Vehicle model: " + vehicle.getVehicleModel());
             System.out.println("Vehicle Make: " + vehicle.getVehicleMake());
             System.out.println("Vehicle Year: " + vehicle.getVehicleYear() + "\n");
-
         }
     }
 }
+
 
