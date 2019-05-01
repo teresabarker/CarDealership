@@ -3,22 +3,33 @@ Project: Car Dealership Salesperson
 Course: IST 242
 Author: Haoyu Cheng
 Date Developed: 4/18/2019
-Last Date Changed: 4/18/2019
-Rev: 3
+Last Date Changed: 5/1/2019
+Rev: 4
 Revision Made: modifying methods
 */
 
 package edu.psu.ist.ab.ist242.team1;
 
 public class SalesPerson {
-    private String SalesmanName;
+
+    // Variables
+    private String salesmanFirstName;
+    private String salesmanLastName;
     private int contact;
+
+    public SalesPerson(String _salesmanFirstName, String _salesmanLastName) {
+        this.salesmanFirstName = _salesmanFirstName;
+        this.salesmanLastName= _salesmanLastName;
+    }
 
     public static void addSalesPerson(){}
     public static void addSalesLead(){}
 
-    public String getSalesmanName(){return SalesmanName; }
-    public void setSalesmanName(String _SalesmanName){this.SalesmanName = _SalesmanName;}
+    public String getSalesmanFirstName(){return salesmanFirstName; }
+    public void setSalesmanFirstName(String _salesmanFirstName){this.salesmanFirstName = _salesmanFirstName;}
+
+    public String getSalesmanLastName(){return salesmanLastName; }
+    public void setSalesmanLastName(String _salesmanLastName){this.salesmanLastName = _salesmanLastName;}
 
     public int getContact(){return contact; }
     public void setContact(int _Contact){this.contact = _Contact;}
