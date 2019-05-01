@@ -29,7 +29,7 @@ public class SalesLead {
     // Variables
     private int SalesLeadId;
     private String SalesLeadFirstName;
-    private String SalesLeadLasttName;
+    private String SalesLeadLastName;
     //address
     private Date SalesLeadDate;
     //private SalesPerson SalesLeadAssignedTo;
